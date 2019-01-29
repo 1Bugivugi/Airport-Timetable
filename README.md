@@ -2,7 +2,7 @@
 Yandex testing
 
 
-```
+```javascript
 function Ticker() {
   this._i = 0
 };
