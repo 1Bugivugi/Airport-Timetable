@@ -14,6 +14,8 @@ Ticker.prototype = {
 };
 
 var ticker = new Ticker();
-setInterval(() => {ticker.tick()}
+setInterval(() => {ticker.tick()}  //fixes the scope(by letting tick's function to leave her own and access global '_i')
 , 1000);
 ```
+
+
