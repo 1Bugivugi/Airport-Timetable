@@ -4,9 +4,9 @@ class Buttons extends Component {
   render() {
     return (
       <div>
-        <a>Departures</a>
-        <a>Arrivals</a>
-        <a>Delays</a>
+        <a onClick={() => {this.props.isActive('departuredTable')}}>Departures</a>
+        <a onClick={() => {this.props.isActive('arrivedTable')}}>Arrivals</a>
+        <a onClick={() => {this.props.isActive('delayedTable')}}>Delays</a>
       </div>
     )
   }

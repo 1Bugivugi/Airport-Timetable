@@ -6,6 +6,11 @@ class SearchBar extends Component {
     query: ''
   }
 
+  updateQuery = (query) => {
+    this.setState({ query });
+    this.props.getState(query);
+  }
+
   render() {
     return (
       <input

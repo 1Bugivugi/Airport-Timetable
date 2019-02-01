@@ -1,9 +1,27 @@
 import React, { Component } from 'react';
 
 class Departures extends Component {
+
+  getList = () => {
+    if (!this.props.values) {
+      return [];
+    } else {
+      return this.props.values
+      .filter(value => value.status === 'departed')
+    }
+  }
+
+  getActive(answer) {
+    if (this.props.isActive === answer) {
+      return ({display: ''});
+    } else {
+      return ({display: 'none'})
+    }
+  }
+
   render() {
     return (
-      <table>
+      <table style={this.getActive('departuredTable')}>
         <thead>
           <tr>
             <th>Departures to</th>
@@ -12,15 +30,16 @@ class Departures extends Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
           {
-            this.props.values
-            .filter(value => value.status === 'departed')
-            .map(value => (
-              <td key={value.id}>{value.to}</td>
-            ))
+            this.getList().map((value) => {
+              let storage = 'SU 1424'
+              if (value.boardNumber.includes(this.props.searchQuery)){
+                return <tr key={value.id}><td>{value.to}</td><td>{value.startTime}</td><td>{value.boardNumber}</td></tr>
+              } else if(this.props.searchQuery === ''){
+                return <tr key={value.id}><td>{value.to}</td><td>{value.startTime}</td><td>{value.boardNumber}</td></tr>
+              }
+            })
           }
-          </tr>
         </tbody>
       </table>
     )

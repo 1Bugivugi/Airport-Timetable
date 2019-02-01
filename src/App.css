@@ -34,7 +34,8 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 75%;
+  margin: auto;
 }
 
 td, th {
@@ -45,4 +46,12 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+input {
+  margin: 10px;
+}
+
+a {
+  margin: 30px;
 }
