@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,26 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# Airport-Timetable
+Yandex testing
+
+
+```javascript
+function Ticker() {
+  this._i = 0
+};
+
+Ticker.prototype = {
+  tick: function() {
+    console.log(this._i++);
+  }
+};
+
+var ticker = new Ticker();
+setInterval(() => {ticker.tick()}  //fixes the scope(by letting tick's function to leave her own and access global '_i')
+, 1000);
+```
+
+
+>>>>>>> b30d265b5377fcecfbd697158612faa9d7dc1a41
