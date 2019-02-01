@@ -24,8 +24,8 @@ class Delays extends Component {
       <table style={this.getActive('delayedTable')}>
         <thead>
           <tr>
-            <th>Departures to</th>
-            <th>At</th>
+            <th>Delayed to</th>
+            <th>Will departure at</th>
             <th>Board Number</th>
           </tr>
         </thead>
