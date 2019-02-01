@@ -74,7 +74,7 @@ function Ticker() {
 
 Ticker.prototype = {
   tick: function() {
-    console.log(this._i++);
+    console.log(this._i++); // in the starting version `this` never left the scope of a nameless function
   }
 };
 
