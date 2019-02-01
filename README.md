@@ -22,6 +22,25 @@ __Разработайте клиентское приложение(сайт), 
 В качестве примера можно посмотреть на http://www.svo.aero/.  
 Ограничений на использование шаблонизаторов и библиотек нет.  
 
+Дополнительное задание  
+#### Ticker
+
+Почему `this._i` не увеличивается. Как исправить?
+```javascript
+function Ticker() {
+  this._i = 0
+};
+
+Ticker.prototype = {
+  tick: function() {
+    console.log(this._i++);
+  }
+};
+
+var ticker = new Ticker();
+setInterval(ticker.tick, 1000);
+```
+
 ## Usage
 
 Basically that's supposed to be an airport timetable where you can view arriving, departuring and delayed flights. There's also a board number search field.
@@ -44,6 +63,8 @@ into the project directory.
 * Create React App
 
 ## Additional task
+
+This is the most right solution I came up with.
 
 ```javascript
 function Ticker() {
