@@ -13,13 +13,15 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <input
-        className="search-input"
-        type="text"
-        placeholder="Search by board number..."
-        value={this.state.query}
-        onChange={(event) => this.updateQuery(event.target.value)}
-      />
+      <div id='search'>
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Search by board number..."
+          value={this.state.query}
+          onChange={(event) => this.updateQuery(event.target.value)}
+        />
+      </div>
     )
   }
 }

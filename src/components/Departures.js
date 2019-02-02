@@ -32,8 +32,7 @@ class Departures extends Component {
         <tbody>
           {
             this.getList().map((value) => {
-              let storage = 'SU 1424'
-              if (value.boardNumber.includes(this.props.searchQuery)){
+              if (value.boardNumber.toLowerCase().includes(this.props.searchQuery.toLowerCase())){
                 return <tr key={value.id}><td>{value.to}</td><td>{value.startTime}</td><td>{value.boardNumber}</td></tr>
               } else if(this.props.searchQuery === ''){
                 return <tr key={value.id}><td>{value.to}</td><td>{value.startTime}</td><td>{value.boardNumber}</td></tr>

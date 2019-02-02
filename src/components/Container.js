@@ -52,11 +52,13 @@ class Container extends Component {
 
   render() {
     return (
-      <div>
+      <div id='content'>
         <div>
           <Buttons
             isActive={this.setActive}
           />
+        </div>
+        <div>
           <SearchBar
             getState={this.getState}
           />

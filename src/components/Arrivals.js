@@ -32,7 +32,11 @@ class Arrivals extends Component {
         <tbody>
         {
           this.getList().map((value) => {
-            return <tr key={value.id}><td>{value.from}</td><td>{value.endTime}</td><td>{value.boardNumber}</td></tr>
+            if (value.boardNumber.toLowerCase().includes(this.props.searchQuery.toLowerCase())){
+              return <tr key={value.id}><td>{value.to}</td><td>{value.startTime}</td><td>{value.boardNumber}</td></tr>
+            } else if(this.props.searchQuery === ''){
+              return <tr key={value.id}><td>{value.to}</td><td>{value.startTime}</td><td>{value.boardNumber}</td></tr>
+            }
           })
         }
         </tbody>

@@ -30,11 +30,15 @@ class Delays extends Component {
           </tr>
         </thead>
         <tbody>
-          {
-            this.getList().map((value) => {
+        {
+          this.getList().map((value) => {
+            if (value.boardNumber.toLowerCase().includes(this.props.searchQuery.toLowerCase())){
               return <tr key={value.id}><td>{value.to}</td><td>{value.startTime}</td><td>{value.boardNumber}</td></tr>
-            })
-          }
+            } else if(this.props.searchQuery === ''){
+              return <tr key={value.id}><td>{value.to}</td><td>{value.startTime}</td><td>{value.boardNumber}</td></tr>
+            }
+          })
+        }
         </tbody>
       </table>
 
